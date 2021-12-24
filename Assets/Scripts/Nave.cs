@@ -27,6 +27,10 @@ public class Nave : MonoBehaviour
         {
             transform.Translate(Vector3.left * -speed * Time.deltaTime);
         }
-  
+
+        if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow))
+        {
+            transform.Translate(Vector3.up * speed * Time.deltaTime);
+        }
     }
 }
