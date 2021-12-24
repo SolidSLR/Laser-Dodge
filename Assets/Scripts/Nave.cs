@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Nave : MonoBehaviour
 {
-    private float speed = 3F;
+    private float speed = 5F;
     private float actualspeed;
     Animator animator;
     private Rigidbody2D rb;
@@ -31,6 +31,11 @@ public class Nave : MonoBehaviour
         if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow))
         {
             transform.Translate(Vector3.up * speed * Time.deltaTime);
+        }
+
+        if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow))
+        {
+            transform.Translate(Vector3.down * speed * Time.deltaTime);
         }
     }
 }
