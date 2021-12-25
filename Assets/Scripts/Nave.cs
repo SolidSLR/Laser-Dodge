@@ -5,7 +5,6 @@ using UnityEngine;
 public class Nave : MonoBehaviour
 {
     private float speed = 5F;
-    private float actualspeed;
     Animator animator;
     private Rigidbody2D rb;
     private Collider2D colisionador;
