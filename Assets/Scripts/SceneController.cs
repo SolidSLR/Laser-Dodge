@@ -46,4 +46,11 @@ public class SceneController : MonoBehaviour
         
     }
 
+    private void spawn(GameObject prefab, Vector3 spawnPoint){
+
+        var go = Instantiate(prefab, spawnPoint, Quaternion.identity);
+        //go.transform.
+
+    }
+
 }
