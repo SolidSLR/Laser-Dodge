@@ -9,7 +9,11 @@ public class SceneController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        if(laserPrefab==null){
+            Debug.Log("SceneController: Ay caramba, no hay balas para tí (no se ha establecido el prefab)");
+        }
 
+        StartCoroutine("corutinaSpawn");
     }
 
     // Update is called once per frame
