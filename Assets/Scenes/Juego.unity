@@ -335,7 +335,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 60
+  field of view: 145
   orthographic: 1
   orthographic size: 15.3
   m_Depth: -1
@@ -747,7 +747,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6323649615322293428, guid: 1bac5a62a66c2c847a5868bc5c84067e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 15.734847
+      value: 34.33
       objectReference: {fileID: 0}
     - target: {fileID: 6323649615322293428, guid: 1bac5a62a66c2c847a5868bc5c84067e, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1323,7 +1323,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1545379106
 Transform:
   m_ObjectHideFlags: 0
