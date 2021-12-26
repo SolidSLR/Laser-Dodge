@@ -26,7 +26,7 @@ private float speed =20f;
 
     private Vector3 topSpawnPoint2 = new Vector3(-15f, 20f, 0f);
 
-    private Vector3 topSpawnPoint = new Vector3(15f, 20f, 0f);
+    private Vector3 topSpawnPoint3 = new Vector3(15f, 20f, 0f);
 
     //Puntos de spawn por abajo
     private Vector3 botSpawnPoint1 = new Vector3(0f, -20f, 0f);
