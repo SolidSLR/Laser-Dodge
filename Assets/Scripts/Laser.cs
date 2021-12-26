@@ -5,7 +5,7 @@ using UnityEngine;
 public class Laser : MonoBehaviour
 {
 
-private float speed =20f;
+private float speed =25f;
 
     //Puntos de spawn por la izquierda
     private Vector3 leftSpawnPoint1 = new Vector3(-22.99f, -1.64f, 0f);
