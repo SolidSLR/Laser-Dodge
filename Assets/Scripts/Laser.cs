@@ -97,9 +97,9 @@ private float speed =25f;
        }else if(transform.position.y>0){
            speed = Mathf.Abs(speed)*-1;
            transform.eulerAngles = new Vector3(0,0,180);
+           Debug.Log("Jelouda");
        }
     }
-
     // Update is called once per frame
     void Update()
     {
