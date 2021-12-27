@@ -18,31 +18,29 @@ public class Nave : MonoBehaviour
 
     void Update()
     {
-
         //Movimiento básico de la nave
         if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
         {
-            transform.Translate(Vector3.right * -speed * Time.deltaTime);
-            //  transform.Rotate(0, 0, -90);
-            //Esto puede ser una idea para rotarlo en el eje de la z, el problema
-            // es que lo hace en cada frame, hay que conseguir que solo se haga una vez
+            transform.eulerAngles = new Vector3(0, 0, 90);
+            transform.Translate(Vector3.up * speed * Time.deltaTime);
         }
 
         if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
         {
-            transform.Translate(Vector3.left * -speed * Time.deltaTime);
+            transform.Translate(Vector3.up * speed * Time.deltaTime);
+            transform.eulerAngles = new Vector3(0, 0, -90);
         }
 
         if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow))
         {
             transform.Translate(Vector3.up * speed * Time.deltaTime);
-            GetComponent<SpriteRenderer>().flipY = false;
+            transform.eulerAngles = new Vector3(0, 0, 0);
         }
 
         if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow))
         {
-            transform.Translate(Vector3.down * speed * Time.deltaTime);
-            GetComponent<SpriteRenderer>().flipY = true;
+            transform.Translate(Vector3.up * speed * Time.deltaTime);
+            transform.eulerAngles = new Vector3(0, 0, 180);
         }
     }
 }
