@@ -14,6 +14,7 @@ public class SceneController : MonoBehaviour
         }
 
         StartCoroutine("corutinaSpawn");
+        //Debug.Log("Jelouda");
     }
 
     // Update is called once per frame
