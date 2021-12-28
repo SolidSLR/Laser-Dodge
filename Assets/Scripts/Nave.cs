@@ -58,5 +58,8 @@ public class Nave : MonoBehaviour
         }
     }
 
-    
+    private void ResetCanDie()
+    {
+        canDie = true;
+    }
 }
