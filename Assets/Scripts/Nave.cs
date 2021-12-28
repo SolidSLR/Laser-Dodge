@@ -6,6 +6,8 @@ public class Nave : MonoBehaviour
 {
     //Declaración de variables
     private float speed = 5F;
+    private byte shipLife = 3;
+    private bool canDie = true;
     Animator animator;
     private Rigidbody2D rb;
     private Collider2D colisionador;
@@ -18,6 +20,7 @@ public class Nave : MonoBehaviour
 
     void Update()
     {
+        ComprobarContacto();
         //Movimiento básico de la nave
         if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
         {
@@ -43,4 +46,17 @@ public class Nave : MonoBehaviour
             transform.eulerAngles = new Vector3(0, 0, 180);
         }
     }
+
+
+    private void ComprobarContacto()
+    {
+        LayerMask mask = LayerMask.GetMask("Balas");
+        if (colisionador.IsTouchingLayers(mask))
+        {
+            shipLife--;
+            canDie = false;
+        }
+    }
+
+    
 }
