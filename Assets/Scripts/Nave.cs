@@ -69,7 +69,7 @@ public class Nave : MonoBehaviour
             canDie = false;
             Debug.Log("Bala impactada");
             //Este valor se tiene que ajustar mas, hablarlo en la reunión
-            Invoke("ResetCanDie", 5f);
+            Invoke("ResetCanDie", 1f);
         }
     }
 
