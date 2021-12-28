@@ -521,6 +521,14 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 814100103555658446, guid: ee6d2208534d3d942b3a3fb326f66895, type: 3}
+      propertyPath: m_Simulated
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 814100103555658446, guid: ee6d2208534d3d942b3a3fb326f66895, type: 3}
+      propertyPath: m_GravityScale
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 814100103555658483, guid: ee6d2208534d3d942b3a3fb326f66895, type: 3}
       propertyPath: m_RootOrder
       value: 5
