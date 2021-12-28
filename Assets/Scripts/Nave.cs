@@ -6,8 +6,11 @@ public class Nave : MonoBehaviour
 {
     //Declaración de variables
     private float speed = 5F;
-    private byte shipLife = 3;
+    private int shipLife = 3;
     private bool canDie = true;
+
+    //Podemos en vez de public hacerlo con un getter, hablarlo en la reunión
+    public bool gameOver = false;
     Animator animator;
     private Rigidbody2D rb;
     private Collider2D colisionador;
@@ -20,30 +23,39 @@ public class Nave : MonoBehaviour
 
     void Update()
     {
-        ComprobarContacto();
-        //Movimiento básico de la nave
-        if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
+        ComprobarGameOver();
+        if (!gameOver)
         {
-            transform.eulerAngles = new Vector3(0, 0, 90);
-            transform.Translate(Vector3.up * speed * Time.deltaTime);
-        }
+            if (canDie)
+            {
+                ComprobarContacto();
+            }
+            Debug.Log("Vidas de la nave: " + shipLife);
+            Debug.Log("Puede morir? " + canDie);
+            //Movimiento básico de la nave
+            if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
+            {
+                transform.eulerAngles = new Vector3(0, 0, 90);
+                transform.Translate(Vector3.up * speed * Time.deltaTime);
+            }
 
-        if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
-        {
-            transform.Translate(Vector3.up * speed * Time.deltaTime);
-            transform.eulerAngles = new Vector3(0, 0, -90);
-        }
+            if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
+            {
+                transform.Translate(Vector3.up * speed * Time.deltaTime);
+                transform.eulerAngles = new Vector3(0, 0, -90);
+            }
 
-        if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow))
-        {
-            transform.Translate(Vector3.up * speed * Time.deltaTime);
-            transform.eulerAngles = new Vector3(0, 0, 0);
-        }
+            if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow))
+            {
+                transform.Translate(Vector3.up * speed * Time.deltaTime);
+                transform.eulerAngles = new Vector3(0, 0, 0);
+            }
 
-        if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow))
-        {
-            transform.Translate(Vector3.up * speed * Time.deltaTime);
-            transform.eulerAngles = new Vector3(0, 0, 180);
+            if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow))
+            {
+                transform.Translate(Vector3.up * speed * Time.deltaTime);
+                transform.eulerAngles = new Vector3(0, 0, 180);
+            }
         }
     }
 
@@ -55,11 +67,23 @@ public class Nave : MonoBehaviour
         {
             shipLife--;
             canDie = false;
+            Debug.Log("Bala impactada");
+            //Este valor se tiene que ajustar mas, hablarlo en la reunión
+            Invoke("ResetCanDie", 5f);
         }
     }
 
     private void ResetCanDie()
     {
         canDie = true;
+    }
+
+    private void ComprobarGameOver()
+    {
+        if (shipLife <= 0)
+        {
+            gameOver = true;
+        }
+
     }
 }
