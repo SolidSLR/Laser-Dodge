@@ -7,8 +7,8 @@ public class SceneController : MonoBehaviour
 {
     public GameObject laserPrefab;
     public Nave nave;
-    private bool lose = false;
-    private bool win = false;
+
+    private int balasDisparadas = 0;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,11 +25,12 @@ public class SceneController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log("/////////////////Estado Game Over;" + nave.gameOver);
         if (nave.gameOver)
         {
             LoadSceneOver("GameOver");
         }
+        if (balasDisparadas >= 50)
+            LoadSceneOver("WinScene");
     }
 
     private IEnumerator corutinaSpawn()
@@ -39,7 +40,7 @@ public class SceneController : MonoBehaviour
         while (x < 50)
         {
             random = Random.Range(1, 13);
-
+            balasDisparadas++;
             yield return new WaitForSeconds(1.5f);
             if (random == 1)
             {
