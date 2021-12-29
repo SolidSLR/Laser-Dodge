@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 
 public class SceneController : MonoBehaviour
@@ -25,6 +26,10 @@ public class SceneController : MonoBehaviour
     void Update()
     {
         Debug.Log("/////////////////Estado Game Over;" + nave.gameOver);
+        if (nave.gameOver)
+        {
+            LoadSceneOver("GameOver");
+        }
     }
 
     private IEnumerator corutinaSpawn()
@@ -120,4 +125,8 @@ public class SceneController : MonoBehaviour
 
     }
 
+    private void LoadSceneOver(string sceneName)
+    {
+        SceneManager.LoadScene(sceneName);
+    }
 }
