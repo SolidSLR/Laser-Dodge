@@ -5,9 +5,13 @@ using UnityEngine;
 public class SceneController : MonoBehaviour
 {
     public GameObject laserPrefab;
+    public Nave nave;
+    private bool lose = false;
+    private bool win = false;
     // Start is called before the first frame update
     void Start()
     {
+        nave = FindObjectOfType<Nave>();
         if (laserPrefab == null)
         {
             Debug.Log("SceneController: Ay caramba, no hay balas para tí (no se ha establecido el prefab)");
@@ -20,8 +24,7 @@ public class SceneController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Nave nave = new Nave();
-        nave.getGameOver();
+        Debug.Log("/////////////////Estado Game Over;" + nave.gameOver);
     }
 
     private IEnumerator corutinaSpawn()

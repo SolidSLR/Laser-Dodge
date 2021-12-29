@@ -10,7 +10,7 @@ public class Nave : MonoBehaviour
     private bool canDie = true;
 
     //Podemos en vez de public hacerlo con un getter, hablarlo en la reunión
-    private bool gameOver = false;
+    public bool gameOver = false;
     Animator animator;
     private Rigidbody2D rb;
     private Collider2D colisionador;
@@ -83,10 +83,4 @@ public class Nave : MonoBehaviour
         }
 
     }
-
-    public bool getGameOver()
-    {
-        return gameOver;
-    }
-
 }
