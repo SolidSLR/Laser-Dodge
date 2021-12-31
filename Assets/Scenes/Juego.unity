@@ -693,6 +693,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89fd60d5b05ae32418f7e7f18dbe5a63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameOver: 0
 --- !u!50 &1046740347
 Rigidbody2D:
   serializedVersion: 4
@@ -853,6 +854,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   laserPrefab: {fileID: 864957277}
+  nave: {fileID: 1046740346}
 --- !u!4 &1636533866
 Transform:
   m_ObjectHideFlags: 0
