@@ -115,6 +115,8 @@ public class Laser : MonoBehaviour
         }else {
             transform.position = new Vector3(transform.position.x, transform.position.y + speed*Time.deltaTime, transform.position.z);
         }
+
+        BulletHit();
  
     }
 
@@ -127,7 +129,7 @@ public class Laser : MonoBehaviour
     }
 
     void DestroyBullet(){
-        Destroy(this, 1.5f);
+        Destroy(this.gameObject);
         Debug.Log("Destruida");
     }
 }
