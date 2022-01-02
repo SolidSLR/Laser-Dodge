@@ -111,9 +111,9 @@ public class Laser : MonoBehaviour
     void Update()
     {
        if(transform.position.x>0||transform.position.x<0){
-            transform.position = new Vector3(transform.position.x + speed*Time.deltaTime, transform.position.y, transform.position.z);
+            transform.position = new Vector3(transform.position.x + speed*Time.deltaTime, transform.position.y, -2);
         }else {
-            transform.position = new Vector3(transform.position.x, transform.position.y + speed*Time.deltaTime, transform.position.z);
+            transform.position = new Vector3(transform.position.x, transform.position.y + speed*Time.deltaTime, -2);
         }
 
         BulletHit();
