@@ -10,6 +10,9 @@ public class Laser : MonoBehaviour
     //Collider de la bala
     private Collider2D colision;
 
+    //Variable que almacena el GameObject
+    private GameObject laser;
+
     //Puntos de spawn por la izquierda
     private Vector3 leftSpawnPoint1 = new Vector3(-22.99f, -1.64f, 0f);
 
@@ -114,5 +117,9 @@ public class Laser : MonoBehaviour
         }else {
             transform.position = new Vector3(transform.position.x, transform.position.y + speed*Time.deltaTime, transform.position.z);
         }
+    }
+
+    void DestroyBullet(){
+        Destroy(laser, 1.5f);
     }
 }
