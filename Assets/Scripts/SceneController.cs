@@ -122,7 +122,6 @@ public class SceneController : MonoBehaviour
     {
 
         var go = Instantiate(prefab, spawnPoint, Quaternion.identity);
-        //go.transform.
 
     }
 

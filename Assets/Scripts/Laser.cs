@@ -4,8 +4,11 @@ using UnityEngine;
 
 public class Laser : MonoBehaviour
 {
+    //Velocidad de la bala
+    private float speed =25f;
 
-private float speed =25f;
+    //Collider de la bala
+    private Collider2D colision;
 
     //Puntos de spawn por la izquierda
     private Vector3 leftSpawnPoint1 = new Vector3(-22.99f, -1.64f, 0f);
@@ -83,6 +86,10 @@ private float speed =25f;
     // Start is called before the first frame update
     void Start()
     {
+
+        colision = GetComponent<Collider2D>();
+        
+
         if(transform.position.x<0){
            speed = Mathf.Abs(speed);
            transform.eulerAngles = new Vector3(0,0,-90);
@@ -104,9 +111,25 @@ private float speed =25f;
     void Update()
     {
        if(transform.position.x>0||transform.position.x<0){
-            transform.position = new Vector3(transform.position.x + speed*Time.deltaTime, transform.position.y, transform.position.z);
+            transform.position = new Vector3(transform.position.x + speed*Time.deltaTime, transform.position.y, -2);
         }else {
-            transform.position = new Vector3(transform.position.x, transform.position.y + speed*Time.deltaTime, transform.position.z);
+            transform.position = new Vector3(transform.position.x, transform.position.y + speed*Time.deltaTime, -2);
         }
+
+        BulletHit();
+ 
+    }
+
+    private void BulletHit(){
+        LayerMask mask = LayerMask.GetMask("NaveJugador");
+
+        if(colision.IsTouchingLayers(mask)){
+            DestroyBullet();
+        }
+    }
+
+    void DestroyBullet(){
+        Destroy(this.gameObject);
+        Debug.Log("Destruida");
     }
 }
