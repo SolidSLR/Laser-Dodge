@@ -8,7 +8,7 @@ public class Nave : MonoBehaviour
     private float speed = 5F;
     private int shipLife = 3;
     private bool canDie = true;
-    public GameObject [] hearts;
+    
 
     //Podemos en vez de public hacerlo con un getter, hablarlo en la reunión
     public bool gameOver = false;
@@ -59,17 +59,7 @@ public class Nave : MonoBehaviour
         }
 
 
-        if (shipLife < 1){
-            Destroy(hearts[0].GameObject);
 
-        }
-        else if (shipLife < 2){
-            Destroy(hearts[1].GameObject);
-
-        }
-        else if (shipLife < 3){
-            Destroy(hearts[2].GameObject);
-        }
     }
 
 
