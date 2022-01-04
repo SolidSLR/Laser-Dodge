@@ -82,10 +82,29 @@ public class Nave : MonoBehaviour
 
     private void ComprobarGameOver()
     {
-        if (shipLife <= 0)
+        
+         if (shipLife = 3)
+        {
+            animator.SetInteger(ContadorVida, 3);
+            
+        }
+     else if (shipLife = 2)
+        {
+            animator.SetInteger(ContadorVida, 2);
+           
+        }
+     else if (shipLife = 1)
+        {
+            animator.SetInteger(ContadorVida, 1);
+            
+        }
+
+     else (shipLife <= 0) ;
         {
             gameOver = true;
         }
+        
 
     }
+
 }
