@@ -6,7 +6,7 @@ public class Nave : MonoBehaviour
 {
     //Declaración de variables
     private float speed = 5F;
-    private int shipLife = 3;
+    public int shipLife = 3;
     private bool canDie = true;
     
 
@@ -16,18 +16,25 @@ public class Nave : MonoBehaviour
     private Rigidbody2D rb;
     private Collider2D colisionador;
 
-    //Guardamos en variables el GameObject y el Animator de la vida
-    GameObject vida;
+    //Guardamos en variables los GameObject de la vida
+    GameObject vida3;
 
-    Animator animatorVida;
+    GameObject vida2;
+
+    GameObject vida1;
+
+    //Animator animatorVida;
     void Start()
     {
         
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
         colisionador = GetComponent<Collider2D>();
-        vida = GameObject.Find("Hearts");
-        animatorVida = vida.GetComponent<Animator>();
+        //Controlamos un GameObject en cada variable
+        vida3 = GameObject.Find("Hearts3");
+        vida2 = GameObject.Find("Hearts2");
+        vida1 = GameObject.Find("Hearts1");
+        //animatorVida = vida.GetComponent<Animator>();
     }
 
     void Update()
@@ -88,35 +95,38 @@ public class Nave : MonoBehaviour
     }
 
     private void ComprobarGameOver()
-    {
-        /*
+    {     
+        /*En estos condicionales, activamos y desactivamos el render de cada unos de los
+        objetos que muestran cuantas vidas le quedan al jugador. No es para nada óptimo, 
+        pero funciona*/
         
-        if(shipLife>0){
-            animatorVida.SetInteger("ContadorVida",shipLife);
-        }else{
-            gameOver = true;
-        }
-        */
-
         //if(shipLife = 3)
         if (shipLife == 3)
         {
             //animator.SetInteger(ContadorVida,3);
-            animatorVida.SetInteger("ContadorVida", shipLife);
-            
+            //animatorVida.SetInteger("ContadorVida", shipLife);
+            vida3.GetComponent<Renderer>().enabled=true;
+            vida2.GetComponent<Renderer>().enabled=false;
+            vida1.GetComponent<Renderer>().enabled=false;
+            Debug.Log("Hola");
         }
         //else if(shipLife = 2)
         else if (shipLife == 2)
         {
             //animator.SetInteger(ContadorVida,2);
-            animatorVida.SetInteger("ContadorVida", 2);
-           
+            //animatorVida.SetInteger("ContadorVida", 2);
+            vida3.GetComponent<Renderer>().enabled=false;
+            vida2.GetComponent<Renderer>().enabled=true;
+            vida1.GetComponent<Renderer>().enabled=false;
         }
         //else if(shipLife == 1)
         else if (shipLife == 1)
         {
             //animator.SetInteger(ContadorVida,1);
-            animatorVida.SetInteger("ContadorVida", 1);
+            //animatorVida.SetInteger("ContadorVida", 1);
+            vida3.GetComponent<Renderer>().enabled=false;
+            vida2.GetComponent<Renderer>().enabled=false;
+            vida1.GetComponent<Renderer>().enabled=true;
             
         }
         //else (shipLife<=0)
