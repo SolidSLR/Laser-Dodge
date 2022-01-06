@@ -15,12 +15,19 @@ public class Nave : MonoBehaviour
     Animator animator;
     private Rigidbody2D rb;
     private Collider2D colisionador;
+
+    //Guardamos en variables el GameObject y el Animator de la vida
+    GameObject vida;
+
+    Animator animatorVida;
     void Start()
     {
         
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
         colisionador = GetComponent<Collider2D>();
+        vida = GameObject.Find("Hearts");
+        animatorVida = vida.GetComponent<Animator>();
     }
 
     void Update()
@@ -87,21 +94,21 @@ public class Nave : MonoBehaviour
         if (shipLife == 3)
         {
             //animator.SetInteger(ContadorVida,3);
-            animator.SetInteger("ContadorVida", 3);
+            animatorVida.SetInteger("ContadorVida", 3);
             
         }
         //else if(shipLife = 2)
         else if (shipLife == 2)
         {
             //animator.SetInteger(ContadorVida,2);
-            animator.SetInteger("ContadorVida", 2);
+            animatorVida.SetInteger("ContadorVida", 2);
            
         }
         //else if(shipLife == 1)
         else if (shipLife == 1)
         {
-            //animator.SetInteger("ContadorVida,1");
-            animator.SetInteger("ContadorVida", 1);
+            //animator.SetInteger(ContadorVida,1);
+            animatorVida.SetInteger("ContadorVida", 1);
             
         }
         //else (shipLife<=0)
