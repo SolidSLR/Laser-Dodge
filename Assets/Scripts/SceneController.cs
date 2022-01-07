@@ -31,7 +31,7 @@ public class SceneController : MonoBehaviour
         {
             LoadSceneOver("GameOver");
         }
-        if (balasDisparadas >= 50)
+        if (balasDisparadas >= 15)
             LoadSceneOver("WinScene");
     }
 
