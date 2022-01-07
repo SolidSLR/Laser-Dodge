@@ -7,13 +7,13 @@ public class SceneController : MonoBehaviour
 {
     public GameObject laserPrefab;
     public Nave nave;
-
+    private string nombreEscena;
     private int balasDisparadas = 0;
     // Start is called before the first frame update
     void Start()
     {
-       
-        
+        nombreEscena = Application.loadedLevelName;
+
         nave = FindObjectOfType<Nave>();
         if (laserPrefab == null)
         {
@@ -27,12 +27,18 @@ public class SceneController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (nave.gameOver)
+        if (nombreEscena.Equals("Juego"))
         {
-            LoadSceneOver("GameOver");
+            ComprobarBalas(15);
         }
-        if (balasDisparadas >= 15)
-            LoadSceneOver("WinScene1");
+        else if (nombreEscena.Equals("Juego2"))
+        {
+            ComprobarBalas(30);
+        }
+        else
+        {
+            ComprobarBalas(50);
+        }
     }
 
     private IEnumerator corutinaSpawn()
@@ -130,5 +136,24 @@ public class SceneController : MonoBehaviour
     private void LoadSceneOver(string sceneName)
     {
         SceneManager.LoadScene(sceneName);
+    }
+
+    private void ComprobarBalas(int numeroBalas)
+    {
+        if (nave.gameOver)
+        {
+            LoadSceneOver("GameOver");
+        }
+        if (balasDisparadas >= numeroBalas)
+        {
+            if (nombreEscena.Equals("Juego2"))
+            {
+                LoadSceneOver("WinScene2");
+            }
+            else
+            {
+                LoadSceneOver("WinScene1");
+            }
+        }
     }
 }

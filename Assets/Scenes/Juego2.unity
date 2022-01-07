@@ -575,11 +575,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ee6d2208534d3d942b3a3fb326f66895, type: 3}
---- !u!1 &864957277 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 814100103555658440, guid: ee6d2208534d3d942b3a3fb326f66895, type: 3}
-  m_PrefabInstance: {fileID: 713928460}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1046740342
 GameObject:
   m_ObjectHideFlags: 0
@@ -1038,7 +1033,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1636533866}
-  - component: {fileID: 1636533865}
   m_Layer: 0
   m_Name: SceneController
   m_TagString: Untagged
@@ -1046,20 +1040,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1636533865
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1636533864}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fec62a99c4bc35f47ad415d849fee080, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  laserPrefab: {fileID: 864957277}
-  nave: {fileID: 1046740346}
 --- !u!4 &1636533866
 Transform:
   m_ObjectHideFlags: 0
