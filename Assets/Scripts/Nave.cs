@@ -19,6 +19,7 @@ public class Nave : MonoBehaviour
     public AudioSource hit1;
 
     public AudioSource hit2;
+
     void Start()
     {
         animator = GetComponent<Animator>();

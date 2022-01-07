@@ -15,6 +15,11 @@ public class SceneController : MonoBehaviour
     public AudioSource disparo1;
     
     public AudioSource disparo2;
+
+    //Variables para controlar victoria y derrota
+    public AudioSource derrota;
+
+    public AudioSource victoria;
     // Start is called before the first frame update
     void Start()
     {
@@ -35,9 +40,11 @@ public class SceneController : MonoBehaviour
         if (nave.gameOver)
         {
             LoadSceneOver("GameOver");
+            derrota.Play();
         }
         if (balasDisparadas >= 50)
             LoadSceneOver("WinScene");
+            victoria.Play();
     }
 
     private IEnumerator corutinaSpawn()
