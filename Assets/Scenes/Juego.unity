@@ -1012,6 +1012,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameOver: 0
+  hit1: {fileID: 1707395560}
+  hit2: {fileID: 945680153}
 --- !u!50 &1046740347
 Rigidbody2D:
   serializedVersion: 4
