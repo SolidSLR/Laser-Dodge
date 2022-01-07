@@ -54,7 +54,7 @@ public class SceneController : MonoBehaviour
 
             if(random2==1){
                 disparo1.Play();
-            }else {
+            }else if(random2==2){
                 disparo2.Play();
             }
             
