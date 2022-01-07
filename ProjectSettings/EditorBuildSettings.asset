@@ -29,4 +29,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Juego3.unity
     guid: fb62ed8d353d43240909557c3c28ff13
+  - enabled: 1
+    path: Assets/Scenes/WinSceneFinal.unity
+    guid: fb2678363492c664e8de4fe522d90967
   m_configObjects: {}
