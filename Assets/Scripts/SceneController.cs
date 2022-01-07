@@ -150,9 +150,13 @@ public class SceneController : MonoBehaviour
             {
                 LoadSceneOver("WinScene2");
             }
-            else
+            else if (nombreEscena.Equals("Juego"))
             {
                 LoadSceneOver("WinScene1");
+            }
+            else
+            {
+                LoadSceneOver("WinSceneFinal");
             }
         }
     }
