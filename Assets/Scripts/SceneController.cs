@@ -44,11 +44,19 @@ public class SceneController : MonoBehaviour
     {
         int x = 0;
         int random;
+        int random2;
         while (x < 50)
         {
-            random = Random.Range(1, 3);
+            random = Random.Range(1, 13);
+            random2 = Random.Range(1, 3);
             balasDisparadas++;
             yield return new WaitForSeconds(1.5f);
+
+            if(random2==1){
+                disparo1.Play();
+            }else {
+                disparo2.Play();
+            }
             
             if (random == 1)
             {

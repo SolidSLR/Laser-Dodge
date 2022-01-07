@@ -581,7 +581,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: d5283a98bb7a9a04a9d41a56e582762f, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.7
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -917,7 +917,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: f632dc95db61dd84ba947a7943370121, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.7
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -1141,7 +1141,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   laserPrefab: {fileID: 864957277}
   nave: {fileID: 1046740346}
-  disparos: []
   disparo1: {fileID: 1476389010}
   disparo2: {fileID: 580223550}
 --- !u!4 &1636533866
