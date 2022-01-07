@@ -29,15 +29,15 @@ public class SceneController : MonoBehaviour
     {
         if (nombreEscena.Equals("Juego"))
         {
-            ComprobarBalas(15);
+            ComprobarBalas(5);
         }
         else if (nombreEscena.Equals("Juego2"))
         {
-            ComprobarBalas(30);
+            ComprobarBalas(5);
         }
         else
         {
-            ComprobarBalas(50);
+            ComprobarBalas(5);
         }
     }
 
