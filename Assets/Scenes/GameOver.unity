@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 376434930}
   - component: {fileID: 376434929}
   m_Layer: 0
-  m_Name: YouDiead
+  m_Name: YouDied
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -299,7 +299,7 @@ GameObject:
   - component: {fileID: 1044016556}
   - component: {fileID: 1044016555}
   m_Layer: 0
-  m_Name: 1108
+  m_Name: BackGround
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
