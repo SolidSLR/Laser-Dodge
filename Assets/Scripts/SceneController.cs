@@ -23,7 +23,7 @@ public class SceneController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        nombreEscena = Application.loadedLevelName;
+       // nombreEscena = Application.loadedLevelName;
 
         
         nave = FindObjectOfType<Nave>();
@@ -39,18 +39,7 @@ public class SceneController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (nombreEscena.Equals("Juego"))
-        {
-            ComprobarBalas(15);
-        }
-        else if (nombreEscena.Equals("Juego2"))
-        {
-            ComprobarBalas(30);
-        }
-        else
-        {
-            ComprobarBalas(50);
-        }
+        ComprobarBalas(25);
     }
 
     private IEnumerator corutinaSpawn()
@@ -167,18 +156,7 @@ public class SceneController : MonoBehaviour
         }
         if (balasDisparadas >= numeroBalas)
         {
-            if (nombreEscena.Equals("Juego2"))
-            {
-                LoadSceneOver("WinScene2");
-            }
-            else if (nombreEscena.Equals("Juego"))
-            {
-                LoadSceneOver("WinScene1");
-            }
-            else
-            {
-                LoadSceneOver("WinSceneFinal");
-            }
+            LoadSceneOver("WinSceneFinal");
         }
     }
 }
