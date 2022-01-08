@@ -9,11 +9,23 @@ public class SceneController : MonoBehaviour
     public Nave nave;
     private string nombreEscena;
     private int balasDisparadas = 0;
+
+    //Variables para controlar el sonido de los disparos
+
+    public AudioSource disparo1;
+    
+    public AudioSource disparo2;
+
+    //Variables para controlar victoria y derrota
+    public AudioSource derrota;
+
+    public AudioSource victoria;
     // Start is called before the first frame update
     void Start()
     {
         nombreEscena = Application.loadedLevelName;
 
+        
         nave = FindObjectOfType<Nave>();
         if (laserPrefab == null)
         {
@@ -45,11 +57,20 @@ public class SceneController : MonoBehaviour
     {
         int x = 0;
         int random;
+        int random2;
         while (x < 50)
         {
             random = Random.Range(1, 13);
+            random2 = Random.Range(1, 3);
             balasDisparadas++;
             yield return new WaitForSeconds(1.5f);
+
+            if(random2==1){
+                disparo1.Play();
+            }else if(random2==2){
+                disparo2.Play();
+            }
+            
             if (random == 1)
             {
                 spawn(laserPrefab, laserPrefab.GetComponent<Laser>().RightSpawnPoint1);

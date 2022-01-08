@@ -24,6 +24,11 @@ public class Nave : MonoBehaviour
     GameObject vida1;
 
     //Animator animatorVida;
+    //Añadidas variables para controlar los efectos de impacto
+    public AudioSource hit1;
+
+    public AudioSource hit2;
+
     void Start()
     {
         
@@ -83,6 +88,12 @@ public class Nave : MonoBehaviour
         if (colisionador.IsTouchingLayers(mask))
         {
             shipLife--;
+            int random2 = Random.Range(1, 3);
+            if(random2==1){
+                hit1.Play();
+            }else if(random2==2){
+                hit2.Play();
+            }
             canDie = false;
             //Este valor se tiene que ajustar mas, hablarlo en la reunión
             Invoke("ResetCanDie", 1f);
