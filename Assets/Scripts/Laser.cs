@@ -11,16 +11,16 @@ public class Laser : MonoBehaviour
     private Collider2D colision;
 
     //Puntos de spawn por la izquierda
-    private Vector3 leftSpawnPoint1 = new Vector3(16.01f, -21.76f, 0f);
+    private Vector3 leftSpawnPoint1 = new Vector3(16.01f, -16f, 0f);
 
-    private Vector3 leftSpawnPoint2 = new Vector3(-6.87f, -21.76f, 0f);
+    private Vector3 leftSpawnPoint2 = new Vector3(-6.87f, -16f, 0f);
 
-    private Vector3 leftSpawnPoint3 = new Vector3(4.23f, -21.67f, 0f);
+    private Vector3 leftSpawnPoint3 = new Vector3(4.23f, -16f, 0f);
 
     //Puntos de spanw por la derecha
-    private Vector3 rightSpawnPoint1 = new Vector3(24.9f, -7.42f, 0f);
+    private Vector3 rightSpawnPoint1 = new Vector3(24.9f, -8f, 0f);
 
-    private Vector3 rightSpawnPoint2 = new Vector3(22.79f, 7.02f, 0f);
+    private Vector3 rightSpawnPoint2 = new Vector3(22.79f, 8f, 0f);
 
     private Vector3 rightSpawnPoint3 = new Vector3(24.96f, 0f, 0f);
 
@@ -32,11 +32,11 @@ public class Laser : MonoBehaviour
     private Vector3 topSpawnPoint3 = new Vector3(-16.84f, 0f, 0f);
 
     //Puntos de spawn por abajo
-    private Vector3 botSpawnPoint1 = new Vector3(15.32f, 20f, 0f);
+    private Vector3 botSpawnPoint1 = new Vector3(15.32f, 14f, 0f);
 
-    private Vector3 botSpawnPoint2 = new Vector3(-8.39f, 20f, 0f);
+    private Vector3 botSpawnPoint2 = new Vector3(-8.39f, 14f, 0f);
 
-    private Vector3 botSpawnPoint3 = new Vector3(4.69f, 20f, 0f);
+    private Vector3 botSpawnPoint3 = new Vector3(4.69f, 14f, 0f);
     public Vector3 LeftSpawnPoint1{
         get { return leftSpawnPoint1;}
     }
@@ -101,7 +101,7 @@ public class Laser : MonoBehaviour
        }else if(transform.position.y<0){
            speed = Mathf.Abs(speed);
            transform.eulerAngles = new Vector3(0,0,0);
-       }else if(transform.position.y>0){
+       }else if(transform.position.y>0 && transform.position.x<0){
            speed = Mathf.Abs(speed)*-1;
            transform.eulerAngles = new Vector3(0,0,180);
            //Debug.Log("Jelouda");
