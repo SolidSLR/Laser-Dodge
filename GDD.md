@@ -8,71 +8,54 @@
        1. Gestor de Proyecto: Santiago
        2. Developer: Ricardo
        3. QA y testing: Antía
-2. Historia del diseño
-   
-3. Información general del juego
+2. Información general del juego
    1.  Concepto del juego
        1. Concepto General
-       2. Características principales
+       Juego de naves que consiste en esquivar balas para pasar de pantalla o morir.
+       3. Características principales
            1. Un jugador
-           2. 
-           3. 
-       3. Diseño
-           1. Objetivo del juego y filosofía
-           2. Qué es diferente
-   2.  Género
-   3.  Audiencia objetivo
+           2. Estilo retro
+       4. Diseño
+           1. Objetivo del juego y filosofía: Entretener y oportunidad de entrenar reflejos
+           3. Qué es diferente: No hay patrones a la hora de generar las balas
+   2.  Género: Arcade
+   3.  Audiencia objetivo: Gente adulta que le guste tener nostalgia
    4.  Experiencia de juego
-        1. Flujo de juego
-        2. Aspecto y sensaciones
+        1. Flujo de juego: Según avanzas de pantalla se va complicando ya que hay que esquivar más balas
 4. Gameplay
    1.  Gameplay
-       1. Progresión del juego
-       2. Objectivos
-       4. Estructura de la misión
-       5. Desafío y estructura del puzle
-       6. Flujo de juego
+       1. Progresión del juego: Avanzas de pantalla cuando esquives todas las balas necesarias por nivel
+       2. Objectivos: Esquivar balas
+       4. Desafío y estructura del puzle: Las balas se disparan en diferentes spawns que se randomizan
+       6. Flujo de juego: Según avanzas de pantalla se va complicando ya que hay que esquivar más balas
 5. Mecánicas
-   1. Físicas y movimiento
-   2. Acciones, interacción y comunicación
-   3. Combate
-   4. Economía
-   5. Cámera y flujo de pantalla
+   1. Físicas y movimiento: Físicas las propias de unity y movimientos direccionales
+   2. Acciones, interacción y comunicación: Si recibes daño tienes un feedback tanto visual como auditivo (Visual: corazones; Auditivo: sonidos de impacto y de disparo)
 6. Opciones de juego
-   1.  Opciones generales
-   2.  Replaying y guardado 
-   3.  Trampas y Easter Eggs
-7. Historia, escenario y personajes
-   1.  Historia y narrativa
-       
-   2.  Mundo del juego
-       1. Visión general y sensación del mundo
-       2. Áreas
-   3.  Personajes
-   4.  Armas e Items
-8. Niveles
-   1.  Nivel Tutorial 
-   2.  Niveles 
-       1. Sinopsis
-       2. Objectivos
-       3. Acciones
+   1.  Opciones generales: En cada pantalla de "Game Over" o del Menú principal puedes salir del juego o darle al inicio
+   2.  Replaying: Cada vez que se juega el spawn cambia
+7. Escenario y personajes   
+   1.  Mundo del juego
+      El espacio
+   2.  Personajes 
+      La nave del jugador
+8. Niveles 
+    Se disponen de diversas pantallas (de momento 3) en las que varía el fondo y la cantidad de balas generadas   
 9. Interfaz
-   1.  Sistema de ayuda
-   2.  GUI (Graphic User Interface)
-   3.  Sistema de control
-   4.  Audio
-       1. SFX (Sound Effects)
-       2. Músics
-10. Inteligencia artificial
-    1. IA de soporte
-    2. IA de enemigos
-    
-11. Técnicos
+   1.  GUI (Graphic User Interface): 
+    -Nave del jugador en el centro de la pantalla
+    -Vidas en la esquina superior izquierda
+    -Balas que pueden aparecer en cualquier sitio de la pantalla
+   2.  Sistema de control
+   -Con las flechas direccionales o WASD
+   3.  Audio
+       1. SFX (Sound Effects): Disparos, golpes, victoria y derrota   
+10. Técnicos
     1. Hardware objetivo
+      PC de perfil bajo
     2. Hardware y software de desarrollo
-       1. Motor de juego
-       2. Software principal
-       3. Requisitos de la web
-12. Arte del juego 
+       1. Motor de juego: Unity
+       2. Software principal: Unity, Visual Code, Git, GitHub y Audacity
+11. Arte del juego 
     1. Assets clave
     2. Estilo deseado
