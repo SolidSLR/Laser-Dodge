@@ -119,7 +119,6 @@ public class Nave : MonoBehaviour
             vida3.GetComponent<Renderer>().enabled=true;
             vida2.GetComponent<Renderer>().enabled=false;
             vida1.GetComponent<Renderer>().enabled=false;
-            Debug.Log("Hola");
         }
         //else if(shipLife = 2)
         else if (shipLife == 2)

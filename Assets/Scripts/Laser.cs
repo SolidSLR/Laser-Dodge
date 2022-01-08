@@ -18,9 +18,9 @@ public class Laser : MonoBehaviour
     private Vector3 leftSpawnPoint3 = new Vector3(4.23f, -21.67f, 0f);
 
     //Puntos de spanw por la derecha
-    private Vector3 rightSpawnPoint1 = new Vector3(24.9f, -12.42f, 0f);
+    private Vector3 rightSpawnPoint1 = new Vector3(24.9f, -7.42f, 0f);
 
-    private Vector3 rightSpawnPoint2 = new Vector3(22.79f, 12.02f, 0f);
+    private Vector3 rightSpawnPoint2 = new Vector3(22.79f, 7.02f, 0f);
 
     private Vector3 rightSpawnPoint3 = new Vector3(24.96f, 0f, 0f);
 
@@ -100,7 +100,7 @@ public class Laser : MonoBehaviour
            //transform.localScale = new Vector3(1,1,1);
        }else if(transform.position.y<0){
            speed = Mathf.Abs(speed);
-           transform.eulerAngles = new Vector3(0,0,-0);
+           transform.eulerAngles = new Vector3(0,0,0);
        }else if(transform.position.y>0){
            speed = Mathf.Abs(speed)*-1;
            transform.eulerAngles = new Vector3(0,0,180);
