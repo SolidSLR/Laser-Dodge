@@ -57,5 +57,15 @@
        1. Motor de juego: Unity
        2. Software principal: Unity, Visual Code, Git, GitHub y Audacity
 11. Arte del juego 
-    1. Assets clave
-    2. Estilo deseado
+
+
+    ![Player](https://media.githubusercontent.com/media/SolidSLR/Laser-Dodge/main/Assets/Galaxia%20Sprite%20Pack%20%231/Player/idle_player_basic.png)
+    ![Laser](https://media.githubusercontent.com/media/SolidSLR/Laser-Dodge/main/Assets/Galaxia%20Sprite%20Pack%20%231/Effects/BulletsSpriteSheetRed.png)
+    ![3 Hearts](https://media.githubusercontent.com/media/SolidSLR/Laser-Dodge/main/Assets/Health%20Sprites/6.png)
+    ![2 Heaths](https://media.githubusercontent.com/media/SolidSLR/Laser-Dodge/main/Assets/Health%20Sprites/4.png)
+    ![1 Heart](https://user-images.githubusercontent.com/94117604/148687298-7130cdac-d576-4669-8360-7598b779b511.png)
+    ![Background1](https://media.githubusercontent.com/media/SolidSLR/Laser-Dodge/main/Assets/Background/Dynamic%20Space%20Background/Sprites/Nebula%20Blue.png)
+    ![Background2](https://media.githubusercontent.com/media/SolidSLR/Laser-Dodge/main/Assets/Background/Dynamic%20Space%20Background/Sprites/Nebula%20Aqua-Pink.png)
+    ![Background3](https://media.githubusercontent.com/media/SolidSLR/Laser-Dodge/main/Assets/Background/Dynamic%20Space%20Background/Sprites/Nebula%20Red.png)
+    ![YouDied](https://media.githubusercontent.com/media/SolidSLR/Laser-Dodge/main/Assets/Background/YouDiead.jpg)
+    ![YouWin](https://media.githubusercontent.com/media/SolidSLR/Laser-Dodge/main/Assets/Background/YouWin.jpg)
